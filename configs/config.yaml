@@ -1,0 +1,19 @@
+# Configuration for MLOps Lab 4-5 House Price Prediction Pipeline
+
+data:
+  raw_path: "data/dataset.csv"
+  dvc_tracked: true
+  target_column: "price"
+  test_size: 0.2
+  random_state: 42
+
+model:
+  algorithm: "RandomForestRegressor"
+  n_estimators: 50
+  max_depth: 5
+  random_state: 42
+
+experiment:
+  name: "House_Price_Advanced"
+  registered_model_name: "HousePriceModel"
+  tracking_uri: "sqlite:///mlflow.db"
